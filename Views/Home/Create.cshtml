@@ -1,0 +1,25 @@
+﻿@model WebApplicationApp.Models.Home
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Add a student";
+}
+<div class="row">
+    <div class="col-md-6">
+        <div class="container">
+            <form asp-action="Create" asp-controller="Home" method="post">
+                <div class="form-group">
+                    <label asp-for="Regno">Registration Number</label>
+                    <input asp-for="Regno" type="text" class="form-control">
+                    <span asp-validation-for="Regno" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name">Full Names</label>
+                    <input asp-for="Name" type="text" class="form-control">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <input type="submit" value="AddNew" class="btn btn-success"/>
+            </form>
+        </div>
+    </div>
+</div>
